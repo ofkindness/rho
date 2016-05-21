@@ -1,0 +1,30 @@
+{
+  "name": "rho",
+  "version": "1.0.0",
+  "description": "Sequelize compatible Redis models",
+  "main": "lib/model.js",
+  "scripts": {
+    "test": "mocha test/*"
+  },
+  "keywords": [
+    "Redis",
+    "ioredis",
+    "Model",
+    "Abstraction",
+    "ORM",
+    "Sequelize"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.0",
+    "ioredis": "^1.15.1",
+    "lodash": "^4.12.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "author": "Andrei Tretyakov <andrei.tretyakov@gmail.com>",
+  "license": "MIT"
+}
