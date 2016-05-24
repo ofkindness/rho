@@ -5,6 +5,6 @@
 
 // var model = require('../lib/model.js');
 
-describe('Model module', function() {
-  it('should Instance Redis');
+describe('Instance module', function() {
+  it('should create the Instance object');
 });
