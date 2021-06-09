@@ -1,4 +1,6 @@
-.jshintrc
+legacy
 node_modules
+.jshintrc
 *.log
 .DS_Store
+.vscode
