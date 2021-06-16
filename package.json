@@ -1,30 +1,45 @@
 {
   "name": "rho",
   "version": "1.0.0",
-  "description": "Sequelize compatible Redis models",
-  "main": "lib/model.js",
+  "description": "Sequelizish Redis models",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "mocha test/*"
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "start": "npm run build && node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofkindness/rho.git"
   },
   "keywords": [
-    "Redis",
-    "ioredis",
-    "Model",
-    "Abstraction",
-    "ORM",
-    "Sequelize"
+    "redis",
+    "typescript"
   ],
-  "dependencies": {
-    "bluebird": "^3.4.0",
-    "ioredis": "^1.15.1",
-    "lodash": "^4.12.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "dirty-chai": "^1.2.2",
-    "sinon": "^1.17.4",
-    "sinon-chai": "^2.8.0"
-  },
   "author": "Andrei Tretyakov <andrei.tretyakov@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ofkindness/rho/issues"
+  },
+  "homepage": "https://github.com/ofkindness/rho#readme",
+  "devDependencies": {
+    "@types/ioredis": "^4.26.4",
+    "@types/lodash": "^4.14.170",
+    "@types/node": "^15.12.2",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "ioredis": "^4.27.5",
+    "lodash": "^4.17.21"
+  }
 }
